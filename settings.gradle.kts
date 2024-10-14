@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "EasyFlipableView"
 include(":app")
+include(":EasyViewFlip")
