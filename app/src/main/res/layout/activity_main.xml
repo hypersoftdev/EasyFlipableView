@@ -7,13 +7,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_simple_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mb_recycler_view"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:text="@string/flip_in_simple_view"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mb_simple_view"
+        app:layout_constraintBottom_toTopOf="@id/mb_flip_once_example"
+        android:text="@string/flip_in_recyclerview"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_flip_once_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mb_recycler_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/flip_once_example"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
