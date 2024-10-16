@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/hypersoftdev/EasyFlipableView.svg)](https://jitpack.io/#hypersoftdev/EasyFlipableView)
 # EasyViewFlip
 
 A simple and efficient flip view component to easily create two-sided views, like flipping cards or credit cards, with smooth animations.
@@ -17,15 +18,15 @@ repositories {
 
 ### Step B: Add Dependencies
 
-In your app-level **build.gradle** file, add the library dependency. Use the latest version:
+In your app-level **build.gradle** file, add the library dependency. Use the latest version: [![](https://jitpack.io/v/hypersoftdev/EasyFlipableView.svg)](https://jitpack.io/#hypersoftdev/EasyFlipableView)
 
 Groovy Version
 ```
- implementation 'com.github.hypersoftdev:EasyViewFlip:x.x.x'
+ implementation 'com.github.hypersoftdev:EasyFlipableView:x.x.x'
 ```
 Kts Version
 ```
- implementation("com.github.hypersoftdev:EasyViewFlip:x.x.x")
+ implementation("com.github.hypersoftdev:EasyFlipableView:x.x.x")
 ```
 
 # Acknowledgements
