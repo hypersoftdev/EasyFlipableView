@@ -110,7 +110,7 @@ easyFlipView.setFlipTypeFromBack();
 easyFlipView.getFlipTypeFrom();
 
 ```
-### Flip Animation Listner
+### Flip Animation Listener
 you can easily listen for the animation completion by setting animation listener.
 ```
 
