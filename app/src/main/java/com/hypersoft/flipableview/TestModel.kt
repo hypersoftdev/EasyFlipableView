@@ -1,4 +1,4 @@
-package com.sample.easyflipableview
+package com.hypersoft.flipableview
 
 class TestModel {
     var isFlipped: Boolean = false

@@ -1,10 +1,10 @@
-package com.sample.easyflipableview
+package com.hypersoft.flipableview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hypersoft.easyviewflip.EasyViewFlip
-import com.sample.easyflipableview.databinding.ItemRecyclerviewBinding
+import com.hypersoft.flipableview.databinding.ItemRecyclerviewBinding
 
 class SampleAdapter(): RecyclerView.Adapter<SampleAdapter.CustomViewHolder>() {
 

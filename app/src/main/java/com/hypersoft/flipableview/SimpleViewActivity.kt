@@ -1,4 +1,4 @@
-package com.sample.easyflipableview
+package com.hypersoft.flipableview
 
 import android.os.Bundle
 import android.widget.Toast
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.hypersoft.easyviewflip.EasyViewFlip
-import com.sample.easyflipableview.databinding.ActivitySimpleViewBinding
+import com.hypersoft.flipableview.databinding.ActivitySimpleViewBinding
 
 class SimpleViewActivity : AppCompatActivity() {
 

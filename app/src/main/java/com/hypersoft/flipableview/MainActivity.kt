@@ -1,4 +1,4 @@
-package com.sample.easyflipableview
+package com.hypersoft.flipableview
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.sample.easyflipableview.databinding.ActivityMainBinding
+import com.hypersoft.flipableview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
