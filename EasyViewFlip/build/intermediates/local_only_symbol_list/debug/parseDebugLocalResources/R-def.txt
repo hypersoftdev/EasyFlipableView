@@ -1,0 +1,23 @@
+R_DEF: Internal format may change without notice
+local
+animator animation_horizontal_flip_in
+animator animation_horizontal_flip_out
+animator animation_horizontal_right_in
+animator animation_horizontal_right_out
+animator animation_vertical_flip_front_in
+animator animation_vertical_flip_in
+animator animation_vertical_flip_out
+animator animation_vertical_front_out
+attr? animFlipInId
+attr? animFlipOutId
+attr? autoFlipBack
+attr? autoFlipBackTime
+attr? flipDuration
+attr? flipEnabled
+attr? flipFrom
+attr? flipOnTouch
+attr? flipOnceEnabled
+attr? flipType
+integer anim_length
+integer anim_length_half
+styleable easy_flip_view flipOnTouch flipDuration flipType flipFrom flipEnabled flipOnceEnabled autoFlipBack autoFlipBackTime animFlipInId animFlipOutId

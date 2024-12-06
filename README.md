@@ -3,6 +3,134 @@
 
 A simple and efficient flip view component to easily create two-sided views, like flipping cards or credit cards, with smooth animations.
 
+![Demo](Art/demo.gif)
+
+## ? Usage
+
+### XML
+
+EasyFlipableView supports both vertical and horizontal flip.
+
+```
+// vertical flip
+<com.hypersoft.easyviewflip.EasyViewFlip
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	app:flipOnTouch="true"
+	app:flipEnabled="true"
+	app:flipDuration="400"
+	app:flipType="vertical"
+	app:flipFrom="front"
+	app:autoFlipBack="true"
+	app:autoFlipBackTime="1000">
+
+	<!-- Back Layout Goes Here -->
+	<include layout="@layout/flash_card_layout_back"/>
+        
+	<!-- Front Layout Goes Here -->
+	<include layout="@layout/flash_card_layout_front"/>
+
+</com.hypersoft.easyviewflip.EasyViewFlip>
+
+// Horizontal flip
+<com.hypersoft.easyviewflip.EasyViewFlip
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	app:flipOnTouch="true"
+	app:flipEnabled="true"
+	app:flipDuration="400"
+	app:flipFrom="right"
+	app:flipType="horizontal"
+	app:autoFlipBack="false">
+
+	<!-- Back Layout Goes Here -->
+	<include layout="@layout/flash_card_layout_back"/>
+
+	<!-- Front Layout Goes Here -->
+	<include layout="@layout/flash_card_layout_front"/>
+
+</com.hypersoft.easyviewflip.EasyViewFlip>
+
+```
+
+### In Code
+
+```
+
+// Flips the view with or without animation
+mYourFlipView.flipTheView();
+mYourFlipView.flipTheView(false);
+
+// Sets and Gets the Flip Animation Duration in milliseconds (Default is 400 ms)
+mYourFlipView.setFlipDuration(1000);
+int dur = mYourFlipView.getFlipDuration();
+
+// Sets and gets the flip enable status (Default is true)
+mYourFlipView.setFlipEnabled(false);
+boolean flipStatus = mYourFlipView.isFlipEnabled();
+
+// Sets and gets the flip on touch status (Default is true)
+mYourFlipView.setFlipOntouch(false);
+boolean flipTouchStatus = mYourFlipView.isFlipOnTouch();
+
+// Get current flip state in enum (FlipState.FRONT_SIDE or FlipState.BACK_SIDE)
+EasyFlipView.FlipState flipSide = mYourFlipView.getCurrentFlipState();
+
+// Get whether front/back side of flip is visible or not.
+boolean frontVal = mYourFlipView.isFrontSide();
+boolean backVal = mYourFlipView.isBackSide();
+
+// Get/Set the FlipType to FlipType.Horizontal
+boolean isHorizontal = mYourFlipView.isHorizontalType();
+mYourFlipView.setToHorizontalType();
+
+// Get/Set the FlipType to FlipType.Vertical
+boolean isVertical = mYourFlipView.isVerticalType();
+mYourFlipView.setToVerticalType();
+
+// Get/Set if the auto flip back is enabled
+boolean isAutoFlipBackEnabled = mYourFlipView.isAutoFlipBack();
+mYourFlipView.setAutoFlipBack(true);
+
+// Get/Set the time in milliseconds (ms) after the view is auto flip back to original front side
+int autoflipBackTimeInMilliseconds = mYourFlipView.getAutoFlipBackTime();
+mYourFlipView.setAutoFlipBackTime(2000);
+
+// Sets the animation direction from left (horizontal) and back (vertical)
+easyFlipView.setFlipTypeFromLeft();
+
+// Sets the animation direction from right (horizontal) and front (vertical)
+easyFlipView.setFlipTypeFromRight();
+
+// Sets the animation direction from front (vertical) and right (horizontal)
+easyFlipView.setFlipTypeFromFront();
+
+// Sets the animation direction from back (vertical) and left (horizontal)
+easyFlipView.setFlipTypeFromBack();
+
+// Returns the flip type from direction. For horizontal, it will be either right or left and for vertical, it will be front or back.
+easyFlipView.getFlipTypeFrom();
+
+```
+### Flip Animation Listener
+you can easily listen for the animation completion by setting animation listener.
+```
+
+EasyFlipView easyFlipView = (EasyFlipView) findViewById(R.id.easyFlipView);
+easyFlipView.setOnFlipListener(new EasyFlipView.OnFlipAnimationListener() {
+            @Override
+            public void onViewFlipCompleted(EasyFlipView flipView, EasyFlipView.FlipState newCurrentSide) 
+            {
+                
+                // ...
+                // Your code goes here
+                // ...
+                
+            }
+        });
+
+```
+
 ## Gradle Integration
 
 ### Step A: Add Maven Repository
